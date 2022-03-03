@@ -31,5 +31,5 @@ return new int[] {indexMap.get(remaining),i};
         indexMap.put(nums[i],i);       
     }
     return null;
-}
+    }
 }
