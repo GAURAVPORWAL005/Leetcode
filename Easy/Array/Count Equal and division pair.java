@@ -13,3 +13,5 @@ class Solution {
         return count;
     }
 }
+
+// Time complexity O(n2).
