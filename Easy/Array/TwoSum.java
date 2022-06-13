@@ -16,20 +16,24 @@ class Solution {
     }
 }
 
-//Optimised Approach
+// Optimized Approach
+// if hashmap contains target - nums[i] value than return it otherwise add the nums[i] to the haspmap along with the index.
 
 class Solution {
-public int[] twoSum(int[] nums, int target) {
-HashMap<Integer,Integer> indexMap = new HashMap<Integer,Integer>();
-int remaining=0;
-for(int i=0;i<nums.length;i++)
-{
-remaining = target-nums[i];
-if(indexMap.containsKey(remaining))
-return new int[] {indexMap.get(remaining),i};
+    public int[] twoSum(int[] nums, int target) {
+        int[] ans = new int[2];
+        HashMap<Integer, Integer> map = new HashMap<>();
+        for(int i=0;i<nums.length;i++){
+            if(map.containsKey(target - nums[i])){
+                ans[0] = map.get(target - nums[i]);
+                ans[1] = i;
+                return ans;
+            }
+            map.put(nums[i], i);
+        }
+        return ans;
+    }
+}
 
-        indexMap.put(nums[i],i);       
-    }
-    return null;
-    }
+// Time Complexity => O(n)
 
