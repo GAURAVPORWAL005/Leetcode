@@ -11,3 +11,4 @@ class Solution {
         return downMove + rightMove;
     }
 }
+// Time complexity => O(2^n)
