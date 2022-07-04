@@ -1,5 +1,20 @@
 // Question => https://leetcode.com/problems/contains-duplicate/submissions/
-// brute force approach
+// Brute force Approach using extra approach
+class Solution {
+    public boolean containsDuplicate(int[] nums) {
+        Set<Integer> set = new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+        if(set.contains(nums[i])){
+        return true;
+        }
+            set.add(nums[i]);
+        }
+        return false;
+    }
+}
+// Time complexity => O(n)
+// Space complexity => O(n)
+//  Optimized approach
 class Solution {
     public boolean containsDuplicate(int[] nums) {
         Arrays.sort(nums);
@@ -12,3 +27,4 @@ class Solution {
     }
 }
 // Time complexity => O(logn)
+
