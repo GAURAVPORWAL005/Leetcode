@@ -14,3 +14,13 @@ class Solution {
     }
 }
 // TIme  complexity => O(n2)
+
+// Better Approach using soritng
+class Solution {
+    public int maxProduct(int[] nums) {
+        Arrays.sort(nums);
+      int max = (nums[nums.length-1]-1) * (nums[nums.length-2]-1);
+        return max;
+    }
+}
+// Time complexity => O(logn)
