@@ -14,4 +14,5 @@ public class Solution {
         return false;
     }
 }
+// space complexity => O(n)
 // TIme complexity => O(n)
